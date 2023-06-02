@@ -1,0 +1,2130 @@
+@import url(fonts.css);
+
+/*
+font-family: 'Jura', sans-serif;
+
+font-family: 'Mulish', sans-serif;
+
+font-family: 'Russo One', sans-serif;
+*/
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+}
+
+:root {
+    --main-swiper-height: 100vh;
+
+    --font-size-h2: 36px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    color: rgba(255, 255, 255, 0.33);
+}
+
+h3 {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+}
+
+h4 {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+}
+
+button {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 10px 25px;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+input {
+    outline: none;
+}
+
+form input[type="submit"] {
+    transition: 0.3s ease-in-out;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    width: fit-content;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body {
+    background: url(../image/noise/noise7.png) black;
+}
+
+body>* {
+    padding-inline: 175px;
+}
+
+
+/* Шапка */
+header {
+    z-index: 4;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    padding-inline: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Бургер меню */
+.burger_buttom {
+    cursor: pointer;
+}
+
+.burger_buttom_close {
+    cursor: pointer;
+}
+
+.burger_menu {
+    padding-inline: 0;
+    z-index: 7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.burger_menu.active {
+    transform: translateX(0%);
+    /* width: 100%; */
+    transition: 0s;
+}
+
+.burger_window {
+    max-width: 100%;
+    width: 500px;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    padding-block: 60px;
+    padding-inline: 20px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.burger_window.active {
+    transform: translateX(0%);
+}
+
+.burger_window>div:first-child a p {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.burger_window>div:first-child a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.burger_window>div:first-child>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.burger_window>div:first-child>div:last-child {
+    margin-top: 80px;
+}
+
+.burger_window>div:last-child {
+    display: flex;
+    gap: 15px;
+}
+
+.burger_window>div:last-child a:first-child button {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.burger_window>div:last-child a:first-child button:hover {
+    background-color: white;
+    color: black;
+}
+
+.burger_window>div:last-child a:last-child button {
+    background-color: transparent;
+    border: none;
+}
+
+.burger_window>div:last-child a:last-child button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.main {
+    padding-inline: 0;
+}
+
+
+
+
+/* Слайдер свайпер */
+.slide1 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, #090909 100%), linear-gradient(270deg, rgba(0, 0, 0, 0) 69.79%, #090909 100%), url(../image/Double_Tap.jpg) no-repeat;
+}
+
+.slide2 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #090909 100%), linear-gradient(270deg, rgba(0, 0, 0, 0) 70%, #090909 100%), url(../image/Haze.jpg) no-repeat;
+}
+
+.slide3 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #090909 100%), linear-gradient(270deg, rgba(0, 0, 0, 0) 70%, #090909 100%), url(../image/Journey.jpg) no-repeat;
+
+}
+
+.swiper.main {
+    height: var(--main-swiper-height);
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.swiper h1 {
+    font-family: 'Russo One', sans-serif;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 96px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+}
+
+.swiper h2 {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    width: 15%;
+}
+
+.slide_main {
+    height: 100%;
+    padding-bottom: 80px;
+    padding-inline: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.slide_main>div:first-child {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.slide_main>div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.slide_main>div:last-child p {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.slide_main>div:last-child p span {
+    font-family: 'Jura', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #009E65;
+}
+
+.see_realese {
+    background: #009E65;
+    border: 1px solid #009E65;
+}
+
+.see_realese:hover {
+    background-color: #ffff;
+    color: #009E65;
+    /* border: 1px solid #009E65; */
+}
+
+.share {
+    background-color: transparent;
+    border: white solid 1px;
+}
+
+.share:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+/* Секция о нас */
+.about_main {
+    margin-top: 180px;
+}
+
+.about_main>div {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.about_main>div>a {
+    flex: 1;
+}
+
+.about_main>div>a>div>div:first-child {
+    margin-bottom: 20px;
+}
+
+.about_main hr {
+    width: 90%;
+}
+
+.about_main>div>a>div>div:first-child h3 {
+    margin-bottom: 10px;
+}
+
+.cart_back img {
+    width: 100%;
+}
+
+.cart_back {
+    min-height: 100%;
+    position: relative;
+}
+
+.cart_back.one img {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart_back h4 {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    font-size: 32px;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+.cart_back.one {
+    background: url(../image/Hopeful.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.cart_back {
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, #131313 100%);
+}
+
+.cart_back::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.66) 100%);
+    ;
+}
+
+.cart_back.one::before {
+    backdrop-filter: blur(5px);
+}
+
+
+
+/* Секция другой музыки */
+.other_music {
+    margin-top: 180px;
+}
+
+.other_music>div h3 {
+    margin-bottom: 20px;
+}
+
+.cart_other_music {
+    display: flex;
+    gap: 40px;
+    margin-top: 70px;
+}
+
+.cart_other_music>div {
+    flex: 1;
+}
+
+.cart_other_music>div:first-child>div {
+    position: relative;
+    background: url(../image/Renaissance.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.cart_other_music>div:last-child>div {
+    position: relative;
+    background: url(../image/XRc0hDeq2Mk.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.cart_other_music>div:last-child>div::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 3.12%, #000000 100%);
+}
+
+.cart_other_music>div:first-child>div img {
+    max-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.cart_other_music>div:first-child>div::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(19, 19, 19, 0.66);
+    backdrop-filter: blur(5px);
+}
+
+.cart_other_music h4 {
+    margin-bottom: 30px;
+}
+
+#gold_h4 {
+    color: #F0D183;
+}
+
+.title_other_music {
+    margin-block: 40px;
+    font-family: 'Mulish';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 175%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+}
+
+.cart_other_music>div a button {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.cart_other_music>div a button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Подвал */
+footer {
+    /* margin-top: 160px;
+    margin-bottom: 80px; */
+
+    padding-top: 160px;
+    padding-bottom: 80px;
+}
+
+footer ul li ul {
+    gap: 20px;
+}
+
+footer>ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 120px;
+    flex-wrap: wrap;
+}
+
+footer>ul li:last-child h5 {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+footer>ul>li {
+    flex: 2;
+}
+
+footer>ul>li:first-child {
+    flex: 1.5;
+}
+
+footer .title_other_music {
+    font-size: 16px;
+}
+
+footer form {
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+footer form input {
+    width: 100%;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    border: none;
+    background-color: transparent;
+}
+
+footer form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    border: transparent solid 1px;
+}
+
+footer form button:hover {
+    border: solid 1px rgba(255, 255, 255, 0.33);
+}
+
+footer hr {
+    margin-top: 70px;
+    color: white;
+    size: 2px;
+}
+
+footer>div p {
+    font-family: 'Mulish';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+}
+
+footer>div {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer>div>div>ul {
+    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+/* Страница авторизации */
+
+/* Задний фон страницы */
+.auth_back {
+    padding-inline: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, #131313 100%, #131313 100%), url(../image/Renaissance.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.reg_back {
+    height: fit-content;
+}
+
+.error {
+    z-index: 50;
+}
+
+.title_auth {
+    margin-top: 190px;
+    margin-bottom: 100px;
+}
+
+.title_auth h1,
+.title_auth span {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.title_auth span {
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.error {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.error p {
+    padding: 10px;
+    font-family: 'mulish';
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff060654;
+}
+
+.succes {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #00C47D;
+}
+
+.succes p {
+    padding: 10px;
+    margin: 20px;
+    font-family: 'mulish';
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.form_auth {
+    width: fit-content;
+    margin: auto;
+}
+
+.form_auth form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.form_auth form>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_auth form>div>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_auth form input,
+.form_auth form label {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    /* text-transform: uppercase; */
+}
+
+.form_auth form input {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.66);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    width: 100%;
+}
+
+.accaunt {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accaunt a,
+.accaunt p {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+
+.accaunt p a {
+    font-weight: 700;
+}
+
+.form_auth form>div:last-child {
+    align-items: flex-end;
+}
+
+.form_auth form input[type="submit"] {
+    width: fit-content;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    padding-block: 10px;
+    padding-inline: 20px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.form_auth form>div input[type="submit"]:hover {
+    background-color: transparent;
+    background-color: white;
+    color: #000000;
+}
+
+
+
+
+
+
+/* Страница регистрации */
+.form_pass p {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.form_auth .fullname {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullname>div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form_reg {
+    margin-bottom: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Страница каталога */
+.catalog {
+    margin-top: 140px;
+}
+
+.catalog h1,
+.catalog span {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 96px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.catalog span {
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+
+
+
+/* Слайдер каталога */
+.swiper_catalog {
+    margin-top: 150px;
+}
+
+.swiper_catalog h2 {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 63px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.swiper.catalog {
+    margin-top: 40px;
+    height: calc(var(--main-swiper-height)/1.5);
+    border: 2px solid #FFFFFF;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.swiper.catalog .swiper-slide {
+    background-position: 0 0;
+    position: relative;
+}
+
+.slider--catalog {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+}
+
+.slider--catalog-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.slider--catalog {
+    padding: 20px;
+}
+
+.scc-1 {
+    background: url(../image/Double_Tap.jpg) no-repeat;
+}
+
+.scc-2 {
+    background: url(../image/Haze.jpg) no-repeat;
+}
+
+.scc-3 {
+    background: url(../image//Journey.jpg) no-repeat;
+}
+
+.scc {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    max-width: 500px;
+    max-height: 500px;
+    background-size: cover;
+}
+
+.scc::before {
+    position: absolute;
+    left: -25px;
+    bottom: 10px;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    font-family: 'Jura';
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+
+.scc-1::before {
+    content: 'Дата релиза - 25 октября, 2022';
+}
+
+.scc-2::before {
+    content: 'Дата релиза - 7 ноября, 2022';
+}
+
+.scc-3::before {
+    content: 'Дата релиза - 31 сентября, 2022';
+}
+
+.catalog--title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.catalog--title-text div>img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.catalog--img {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.catalog--title-h1-h2 h2,
+.catalog--title-h1-h2 span {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+}
+
+.catalog--title-h1-h2 h2 {
+    font-size: 32px;
+}
+
+.catalog--title-h1-h2 span {
+    font-size: 36px;
+    -webkit-text-stroke-width: 1px;
+}
+
+.catalog--title-text>div>a>button {
+    background: #00BE7A;
+}
+
+.catalog--title-text>div>a>button:hover {
+    background-color: white;
+    color: black;
+}
+
+.catalog--container {
+    margin-top: 150px;
+}
+
+.catalog--container h2 {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 63px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.catalog--container-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.catalog--container-title a button {
+    padding-inline: 10px;
+    height: 45px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
+
+.catalog--container-title a button:hover {
+    background-color: #00BE7A;
+    border: solid 1px #00BE7A;
+}
+
+.catalog--container-title>div {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.catalog--container-release {
+    margin-top: 100px;
+}
+
+.catalog--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.catalog--grid a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.catalog--grid>div {
+    width: fit-content;
+}
+
+.catalog--grid>div img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.catalog--grid>div a p {
+    font-family: 'Jura';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.catalog--grid>div a p:nth-child(2) {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.catalog--grid>div a p:last-child {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Страница альбома и песни, где ее можно прослушать */
+
+/* Аудиоплеер */
+
+.audioplayer {
+    z-index: 33;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../image/noise/noise7.png) black;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(110px);
+    transition: 0.3s ease-in-out;
+}
+
+.audioplayer.active {
+    transform: translateX(0px);
+}
+
+.controls {
+    z-index: 33;
+    width: fit-content;
+    display: flex;
+    gap: 55px;
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 50%);
+}
+
+.controls button {
+    z-index: 33;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+
+.play.hide {
+    z-index: 33;
+    display: none;
+}
+
+.pause.active {
+    z-index: 33;
+    display: block;
+}
+
+.pause {
+    z-index: 33;
+    display: none;
+}
+
+.audioplayer p {
+    z-index: 33;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.progress {
+    z-index: 33;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.time-start {
+    z-index: 33;
+    bottom: 50px;
+    transform: translate(0%, 50%);
+    position: fixed;
+    display: flex;
+    gap: 100px;
+    left: 40px;
+}
+
+.time-start p span {
+    z-index: 33;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.time-end {
+    z-index: 33;
+    bottom: 50px;
+    transform: translate(0%, 50%);
+    position: fixed;
+    right: 40px;
+    display: flex;
+    gap: 100px;
+}
+
+.value {
+    z-index: 33;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Стилизация ползунка для аудио плеера */
+.value>input {
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    z-index: 33;
+    width: 150px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.value>input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.value>input::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.value>input::-ms-thumb {
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.value>input:hover::-webkit-slider-thumb {
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.value>input:hover::-moz-range-thumb {
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.value>input:hover::-ms-thumb {
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.value>input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  /* background: transparent; */
+  outline: none;
+}
+
+.value>input::-webkit-slider-runnable-track {
+  background: #ccc;
+  height: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.value>input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin-top: -6px;
+}
+
+.value>input::-moz-range-progress {
+  background: #ccc; /* Заливка слева от ползунка для Firefox */
+  height: 5px;
+}
+
+.value>input::-ms-fill-lower {
+  background: #ccc; /* Заливка слева от ползунка для Edge */
+  height: 5px;
+}
+/* Конец стилизации ползунка */
+
+/* Скрытые div для передачи картинок от laravel на js и обратно */
+.image-url {
+    display: none !important;
+}
+
+.albom {
+    width: 100vw;
+    height: 100vh;
+
+    background: url(../image/Double_Tap.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.albom--view {
+    padding-inline: inherit;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0.1) 0%, #131313 100%);
+    backdrop-filter: blur(5px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.albom--main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.albom--main>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cover {
+    position: relative;
+
+    background: url(../image/Double_Tap.jpg);
+    background-size: cover;
+}
+
+.cover::before {
+    content: "Дата релиза - 19 октября, 2022";
+    position: absolute;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.07em;
+    color: #ffff;
+    top: -30px;
+}
+
+.albom--main h1 {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 92px;
+    letter-spacing: 0.1em;
+
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.albom--main h2 {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.07em;
+}
+
+.albom--main>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cover--img {
+    display: flex;
+    gap: 35px;
+}
+
+.albom--main img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.albom--main>div {
+    flex: 1;
+}
+
+.see_release {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    width: fit-content;
+    padding: 10px 25px;
+    border: 1px solid #00C47D;
+    background-color: transparent;
+    color: #00C37D;
+}
+
+.see_release:hover {
+    background-color: #009E65;
+    /* border: 1px solid white; */
+    color: white;
+}
+
+.albom--list {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+}
+
+.albom--list>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.albom--list>div:first-child h2 {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: 0.07em;
+}
+
+.albom--list>div:first-child a {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+    letter-spacing: 0.07em;
+    color: #B7E90E;
+}
+
+.albom--list>div:last-child {
+    align-self: center;
+}
+
+.albom--list ul li {
+    justify-content: space-between;
+    display: flex;
+}
+
+.albom--list ul li>div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.playlist>p {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    width: 25px;
+}
+
+.playlist .title {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.07em;
+}
+
+.playlist .author {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+}
+
+.playlist button {
+    display: none;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.playlist .playbtn.active {
+    display: block;
+}
+
+.playlist .pausebtn.active {
+    display: block;
+}
+
+.playlist>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timelist .time {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.07em;
+}
+
+.add_trek_to_albom button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.add_trek_to_albom button:hover {
+    background-color: #009E65;
+    border: #009E65 1px solid;
+}
+
+
+
+
+/* Страница добавления альбома */
+
+.addalbom {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: url('../image/V42z6zHEALk.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-inline: 0;
+}
+
+.back-blur {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0.65) 0%, #131313 100%);
+    backdrop-filter: blur(10px);
+    padding-top: 200px;
+}
+
+.back-blur h1 {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: auto;
+    width: fit-content;
+}
+
+.form-albom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 66%;
+    margin: auto;
+    margin-top: 150px;
+    gap: 30px;
+}
+
+.form-albom>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.form-albom label {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: solid 1px white;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    transition: 0.3s ease-in-out;
+}
+
+.form-albom label:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-albom>div input {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    flex: 1;
+}
+
+.form-albom>div input:last-child {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.form-albom input[type="submit"] {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    background-color: transparent;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.form-albom input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-albom >div>p {
+    border-bottom: 1px solid white;
+    flex: 1;
+}
+
+
+
+/* Страница профиля */
+.profile {
+    width: 100vw;
+    /* height: 100vh; */
+    position: absolute;
+    background: url('../image/l8M_i0ZOe4I\ 1.png') no-repeat fixed;
+    background-size: cover;
+    background-position: center center;
+    padding-inline: 0;
+}
+
+.profile * {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.blur-profile {
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0.1) 0%, rgba(19, 19, 19, 0.4375) 37.5%, #131313 100%) fixed;
+    backdrop-filter: blur(5px);
+    padding-inline: 175px;
+}
+
+.user-info {
+    margin-top: 70px;
+}
+
+.profile h1{
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+
+    /* identical to box height */
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.user-info  h2{
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.line {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-block: 10px;
+}
+
+.user-info .form-info {
+    align-items: baseline !important;
+    gap: 20px !important;
+    margin-bottom: 40px !important;
+}
+
+.user-info .form-info:last-child {
+    margin-bottom: 0px !important;
+}
+
+.form-info >div {
+    align-items: baseline !important;
+}
+
+.button-save {
+    align-self: flex-end;
+}
+
+form.form-info:nth-child(1) > div:nth-child(3) {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#image-element {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #0000003b;
+}
+
+.image-label {
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.image-label:hover {
+    position: relative;
+    opacity: 0.5;
+}
+
+.image-label::before{
+    content: "Изменить";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.image-label:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптив главной старницы */
+@media (max-width:1266px) {
+    header {
+        background: rgba(0, 0, 0, 0.66);
+        backdrop-filter: blur(5px);
+        padding-block: 20px;
+        top: 0;
+    }
+
+    .about_main>div>div {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .about_main>div {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .cart_other_music {
+        display: flex;
+        gap: 40px;
+        margin-top: 70px;
+        flex-wrap: wrap;
+    }
+
+    .cart_other_music>div {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .slider--catalog-content {
+        flex-direction: column;
+    }
+
+    body>* {
+        padding-inline: 75px;
+    }
+
+    .blur-profile {
+        padding-inline: 75px;
+    }
+
+    .slide_main {
+        padding-inline: 75px;
+        padding-bottom: 20px;
+    }
+
+    .catalog--title-text {
+        gap: 20px;
+    }
+
+    .slider--catalog-content {
+        gap: 20px;
+    }
+
+    .albom--main {
+        margin-top: 120px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .albom--main h1 {
+        font-size: 52px;
+        line-height: normal;
+    }
+
+    .albom--main h2 {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .cover--img {
+        flex-wrap: wrap;
+    }
+
+    .cover {
+        min-width: 100%;
+    }
+
+    .albom--main {
+        margin-bottom: 30px;
+        justify-content: flex-end;
+    }
+
+    .cover::before {
+        font-size: 16px;
+        top: -25px;
+    }
+
+}
+
+@media (max-width:768px) {
+    body>* {
+        padding-inline: 20px;
+    }
+
+    .blur-profile {
+        padding-inline: 20px;
+    }
+
+    header {
+        z-index: 6;
+        padding-inline: 20px;
+    }
+
+    h5,
+    h4,
+    h3,
+    h2,
+    h1 {
+        line-height: normal;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    ul li a {
+        font-size: 28px;
+    }
+
+    .albom--main h1 {
+        font-size: 36px;
+    }
+
+    .albom--main h2 {
+        font-size: 24px;
+    }
+
+    .cover--img img {
+        width: 80px;
+        height: 80px;
+    }
+
+    ul li a {
+        font-size: 18px;
+    }
+
+    footer>ul {
+        gap: 60px;
+    }
+
+    .albom--main>div:last-child {
+        gap: 20px;
+    }
+
+    .slide_main {
+        padding-inline: 20px;
+        padding-bottom: 4 0px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .slide_main>div:last-child {
+        align-items: flex-start;
+    }
+
+    .slide_main>div:first-child {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0px;
+    }
+
+    .swiper h2 {
+        width: auto;
+        line-height: normal;
+        font-size: 32px;
+    }
+
+    .swiper h1 {
+        writing-mode: horizontal-tb;
+        rotate: 0deg;
+        font-size: 52px;
+        line-height: normal;
+    }
+
+    .slider--catalog-content {
+        justify-content: space-around;
+    }
+
+    .swiper.catalog {
+        height: calc(var(--main-swiper-height));
+    }
+
+    .cart_back h4 {
+        font-size: 24px;
+    }
+
+    .catalog h1,
+    .catalog span {
+        font-size: 44px;
+        line-height: normal;
+    }
+
+    .catalog--container-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .swiper_catalog h2 {
+        font-size: 36px;
+    }
+
+    .catalog--container h2 {
+        font-size: var(--font-size-h2);
+    }
+
+    .catalog--title-text div>img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .catalog--title-h1-h2 h2,
+    .catalog--title-h1-h2 span {
+        font-size: calc(var(--font-size-h2) - 4px);
+    }
+
+    .albom--list>div:first-child h2 {
+        font-size: 32px;
+    }
+
+    .albom--list ul li>div {
+        gap: 20px;
+    }
+
+    .albom--list ul li {
+        gap: 20px;
+    }
+}
+
+
+
+
+/* Адаптив страницы регистрации и авторизации */
+@media (max-width:768px) {
+    .form_auth form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        /* width: fit-content; */
+        margin: auto;
+        padding-inline: 20px;
+    }
+
+    .form_auth form input {
+        padding-inline: 10px;
+    }
+
+    .form_auth .fullname {
+        gap: inherit;
+    }
+}
+
+@media (max-width:768px) {
+    form.form-info:nth-child(1) > div:nth-child(2){
+        flex-direction: column;
+    }
+}

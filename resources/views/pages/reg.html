@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Сотрясатель</title>
+</head>
+
+<body class="signup_layout">
+    <div class="auth_back reg_back">
+        <!-- Шапка и бургер меню -->
+        <header>
+            <a href=""><img src="../icon/svg/logo_white.svg" alt=""></a>
+            <img src="../icon/svg/burger.svg" alt="" class="burger_buttom">
+        </header>
+        <div class="burger_menu">
+            <div class="burger">
+                <div class="burger_window">
+                    <div>
+                        <div>
+                            <a href=""><img src="../icon/svg/logo_white.svg" alt="">
+                                <p>Сотрясатель</p>
+                            </a>
+                            <img src="../icon/svg/cross.svg" alt="" class="burger_buttom_close">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Музыка</a></li>
+                                <li><a href="">Компазиторы</a></li>
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Новости</a></li>
+                                <li><a href="">Подписка</a></li>
+                                <li><a href="">Стать артистом</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <a href=""><button>Войти</button></a>
+                        <a href=""><button>Регистрация</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title_auth">
+            <h1><span>создание</span> <br> аккаунта</h1>
+        </div>
+        <div class="form_auth form_reg">
+            <form method="post" name="reg">
+                <div>
+                    <label for="email">ЭЛЕКТРОННАЯ ПОЧТА</label>
+                    <input type="text" name="email" id="email" placeholder="Электронная почта">
+                </div>
+                <div class="form_pass">
+                    <label for="pass1">ПАРОЛЬ</label>
+                    <input type="password" name="pass1" id="pass1" placeholder="Пароль">
+                    <p>Пароль должен состоять как минимум из 6 символов</p>
+                </div>
+                <div class="form_pass">
+                    <label for="pass2">ПОВТОРИТЕ ПАРОЛЬ</label>
+                    <input type="password" name="pass2" id="pass2" placeholder="Повторите пароль">
+                    <!-- <p>Пароль должен состоять как минимум из 6 символов</p> -->
+                </div>
+                <div>
+                    <label for="username">Псевдоним</label>
+                    <input type="text" name="username" id="username" placeholder="Псевдоним">
+                </div>
+                <div class="fullname">
+                    <div>
+                        <label for="firstname">Имя</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Имя">
+                    </div>
+                    <div >
+                        <label for="lastname">Фамилия</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Фамилия">
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" name="reg" value="зарегистрироваться">
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
