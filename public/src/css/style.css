@@ -276,6 +276,7 @@ header {
     -webkit-text-stroke-width: 1px;
     writing-mode: vertical-rl;
     rotate: 180deg;
+    height: 80%;
 }
 
 .swiper h2 {
@@ -390,6 +391,8 @@ header {
 }
 
 .cart_back.one img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
     width: 50%;
     position: absolute;
     top: 50%;
@@ -970,18 +973,6 @@ footer>div>div>ul {
     letter-spacing: 0.1em;
 }
 
-.scc-1::before {
-    content: 'Дата релиза - 25 октября, 2022';
-}
-
-.scc-2::before {
-    content: 'Дата релиза - 7 ноября, 2022';
-}
-
-.scc-3::before {
-    content: 'Дата релиза - 31 сентября, 2022';
-}
-
 .catalog--title-text {
     display: flex;
     flex-direction: column;
@@ -1385,18 +1376,6 @@ footer>div>div>ul {
     background-size: cover;
 }
 
-.cover::before {
-    content: "Дата релиза - 19 октября, 2022";
-    position: absolute;
-    font-family: 'Jura';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.07em;
-    color: #ffff;
-    top: -30px;
-}
 
 .albom--main h1 {
     font-family: 'Russo One';
@@ -1432,6 +1411,7 @@ footer>div>div>ul {
 }
 
 .albom--main img {
+    object-fit: cover;
     width: 100px;
     height: 100px;
     border-radius: 50%;

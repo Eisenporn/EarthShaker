@@ -22,7 +22,7 @@ class AddAlbumRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image_preview'=>'required|mimes:png,jpg,jpeg',
+            'image_preview'=>'required|mimes:png,jpg,jpeg,webp',
             'title'=>'required|max:253',
             'max'=>'Превышено максимальное количество символов',
             'mimes'=>'Изображение должно быть формата: png, jpeg, jpg',

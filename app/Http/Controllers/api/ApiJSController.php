@@ -11,9 +11,7 @@ class ApiJSController extends Controller
 {
     public function endpoint($id)
     {
-
         $album = album::find($id);
-
         $composition = composition::query()->where('album_id', '=', $id)->get();
 
         return response()->json([

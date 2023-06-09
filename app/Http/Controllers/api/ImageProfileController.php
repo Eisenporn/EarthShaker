@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ImageProfileRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ImageProfileController extends Controller
 {

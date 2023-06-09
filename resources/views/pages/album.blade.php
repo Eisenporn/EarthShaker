@@ -4,9 +4,14 @@
     <script src="{{ asset('src/js/albom.js') }}"></script>
     <script src="{{asset ('src/js/audioplayer.js')}}"></script>
 
-    {{-- Скрытый div для передачи правильно пути от larave на js и обратно --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="{{ asset('src/js/index.js') }}" defer></script>
+
+    {{-- Скрытый div для передачи правильно пути от laravel на js и обратно --}}
     <div class="image-url arrow-right" data-src="{{ asset('src/icon/svg/arrow_right.svg') }}"></div>
     <div class="image-url pause-btn" data-src="{{ asset('src/icon/svg/audio/pause.svg') }}"></div>
+    <div class="image-url download-btn" data-src="{{ asset('src/icon/svg/download.svg') }}"></div>
 
     <section class="albom"> {{-- задний фон обложки --}}
         <div class="albom--view">
@@ -18,10 +23,10 @@
                         <h2 class="author">{{ $composition->maker_name }}</h2>
                     </div>
                     <div class="cover--img">
-                        <img src="{{ asset('src/image/B03v4lsGaiA.jpg') }}" alt="">
-                        <img src="{{ asset('src/image/F-JcoYh2FuU.jpg') }}" alt="">
+                        <img src="{{ '/storage/' . $user['avatar_image'] }}" alt="">
+                        {{-- <img src="{{ asset('src/image/F-JcoYh2FuU.jpg') }}" alt=""> --}}
                     </div>
-                    <button class="see_release">Прослушать</button>
+                    {{-- <button class="see_release">Прослушать</button> --}}
                 </div>
             </div>
         </div>
@@ -30,11 +35,11 @@
     <section class="albom--list">
         <div>
             <h2>Трек лист</h2>
-            @auth
+            {{-- @auth
                 @if (Auth::user()->level > 1)
                     <a href="">Редактировать альбом</a>
                 @endif
-            @endauth
+            @endauth --}}
         </div>
         <div>
             <ul class="track-list">
@@ -51,7 +56,7 @@
 
             <div class="time-start">
                 <p class="time-lest">1:15</p>
-                <p>Going quantum & Hayve - <span>Double Tap</span></p>
+                {{-- <p class="audio-maker">Going quantum & Hayve - <span class="audio-title">Double Tap</span></p> --}}
             </div>
             <div class="controls">
                 <button class="right"><img src="{{asset ('src/icon/svg/audio/arrow_ruight.svg')}}" alt=""></button>

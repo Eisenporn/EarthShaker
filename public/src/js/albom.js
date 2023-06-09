@@ -21,8 +21,6 @@ fetch("/api/endpoint/" + id, {
 });
 
 function ShowAlbum(data) {
-    // console.log(data);
-
     const backroundAlbom = document.querySelector(".albom");
     const cover = backroundAlbom.querySelector(".cover");
     backroundAlbom.style.background = `top/cover url('/storage/${data["image_preview"]}')`;

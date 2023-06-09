@@ -29,8 +29,15 @@ function playAudioPlayerfunc(compositionData) {
         .dataset.src;
     const imageUrlPauseBtn = document.querySelector(".image-url.pause-btn")
         .dataset.src;
+    const imageUrlDownloadBtn = document.querySelector(
+        ".image-url.download-btn"
+    ).dataset.src;
+    let audioUrl
+
     compositionData.forEach((track, index) => {
         const listItem = document.createElement("li");
+        audioUrl = `/storage/${track.music_src}`;
+
         listItem.innerHTML = `
     <div class="playlist">
         <p class="number-in-album">${index + 1}</p>
@@ -48,10 +55,15 @@ function playAudioPlayerfunc(compositionData) {
         </div>
     </div>
     <div class="timelist">
+        <a href="" download id="download-link-${index}">
+            <img src="${imageUrlDownloadBtn}" alt="">
+        </a>
         <p class="time"></p>
     </div>
   `;
         trackList.appendChild(listItem);
+        let downloadLink = document.getElementById(`download-link-${index}`);
+        downloadLink.href = audioUrl;
     });
 
     // Получение ссылок на элементы плеера
@@ -115,8 +127,11 @@ function playAudioPlayerfunc(compositionData) {
 
     // Обработчик события для кнопки "right"
     leftButton.addEventListener("click", () => {
-        if (isPlaying) {
+        if (isPlaying === false) {
             pauseTrack();
+            currentTrackIndex =
+                (currentTrackIndex + 1) % compositionData.length;
+            console.log(currentTrackIndex);
         } else {
             console.log(isPlaying);
             currentTrackIndex =
@@ -128,8 +143,11 @@ function playAudioPlayerfunc(compositionData) {
 
     // Обработчик события для кнопки "left"
     rightButton.addEventListener("click", () => {
-        if (isPlaying) {
+        if (isPlaying === false) {
             pauseTrack();
+            currentTrackIndex =
+                (currentTrackIndex + 1) % compositionData.length;
+            console.log(currentTrackIndex);
         } else {
             console.log(isPlaying);
             currentTrackIndex =
@@ -146,6 +164,9 @@ function playAudioPlayerfunc(compositionData) {
         const pausebutton = pauseButtons[index];
 
         playButtonBottom.addEventListener("click", () => {
+            audioPlayerBottom.classList.add("active");
+            playButtonBottom.classList.add("hide");
+            pauseButtonBottom.classList.add("active");
             playButtonBottom.classList.add("hide");
             pauseButtonBottom.classList.add("active");
             currentTrackIndex = index;

@@ -25,7 +25,7 @@
                     <label for="title">Название трека</label>
                     <input type="text" name="name" id="title" placeholder="Название трека">
                 </div>
-                <input class="submit_albom" name="addtrack" type="submit" value="Создать альбом">
+                <input class="submit_albom" name="addtrack" type="submit" value="Добавить трек">
             </form>
 
         </div>

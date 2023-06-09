@@ -19,7 +19,7 @@
                 @csrf
                 <div>
                     <label class="button-img-cover" for="img-cover">Добавить обложку</label>
-                    <input accept=".png, .jpg, .jpeg" type="file" name="image_preview" id="img-cover">
+                    <input accept=".png, .jpg, .jpeg, .webp" type="file" name="image_preview" id="img-cover">
                 </div>
                 <div>
                     <label for="title">Название альбома</label>
