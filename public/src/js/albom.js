@@ -1,5 +1,4 @@
 var id = window.location.pathname.split("/").pop();
-console.log(id);
 var albumData;
 var compositionData;
 

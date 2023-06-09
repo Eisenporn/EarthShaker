@@ -1,8 +1,6 @@
 const shareLink = document.querySelectorAll('.share-link');
 const shareButton = document.querySelectorAll('.share');
 
-console.log(shareButton);
-
 for (let i = 0; i < shareLink.length; i++) {
     shareLink[i].addEventListener('click', function(event){
         event.preventDefault();

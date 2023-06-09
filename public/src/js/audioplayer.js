@@ -32,7 +32,7 @@ function playAudioPlayerfunc(compositionData) {
     const imageUrlDownloadBtn = document.querySelector(
         ".image-url.download-btn"
     ).dataset.src;
-    let audioUrl
+    let audioUrl;
 
     compositionData.forEach((track, index) => {
         const listItem = document.createElement("li");
@@ -80,8 +80,6 @@ function playAudioPlayerfunc(compositionData) {
     const pauseButtonBottom = controlsElement.querySelector(".pause");
     const rightButton = controlsElement.querySelector(".right");
     const leftButton = controlsElement.querySelector(".left");
-
-    console.log(playButtonBottom);
 
     // Инициализация текущего трека
     let currentTrackIndex = 0;
